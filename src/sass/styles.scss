@@ -3,3 +3,244 @@
 * {
     box-sizing: border-box;
 }
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+.ellipse {
+    display: inline-flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    padding: .7rem 1.3rem;
+    background: linear-gradient(120deg, #582c7e, #6275cb);
+    border-radius: 20px;
+    box-shadow: 0 7px 20px #8796c7;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        box-shadow: 0 7px 20px #8796c7, 0 4px 12px #582c7e;
+    }
+
+    &__text {
+        font-weight: bold;
+        color: #fff;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: .9rem;
+    }
+}
+
+.header {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 16rem;
+    margin-bottom: -20px;
+    position: relative;
+    background-image: linear-gradient(#fff 40%, transparent), url('../../assets/images/header-background.png');
+    background-repeat: no-repeat;
+    background-position: center 70%;
+    background-size: 100% auto;
+
+    &__top {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        max-width: 1400px;
+        width: 100%;
+        padding-top: 4.7rem;
+        margin: 0 1rem;
+    }
+
+    &__h1 {
+        width: 100%;
+        text-align: center;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 3.7rem;
+        font-weight: bold;
+        color: $primary-dark;
+        margin-top: 10rem;
+    }
+    
+    &__location-text {
+        width: 100%;
+        text-align: center;
+        font-size: 2.2rem;
+        font-family: 'Ubuntu', sans-serif;
+        color: $primary-dark;
+        padding: 1rem;
+        margin-bottom: 4rem;
+    }
+
+    &__location {
+        color: $primary-pink;
+    }
+
+    &__account {
+        padding: 1.2rem 3.8rem;
+        border-radius: 30px;
+    }
+    
+    &__account-text {
+        font-size: 1.1rem;
+    }
+
+    &__app-download {
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        padding: 0;
+    }
+    
+    &__download-icon {
+        font-size: 1.2rem;
+        font-weight: normal;
+
+        &--play {
+            margin-left: .2rem;
+        }
+    }
+
+    &__ellipse {
+        margin: 0 .5rem;
+        background: linear-gradient(to right, #636b92, #5f2f6a);
+    }
+
+    &__socials {
+        display: flex;
+        flex-flow: column nowrap;
+        position: absolute;
+        right: 34px;
+        top: 50%;
+        transform: translateY(50%);
+    }
+
+    &__socials-link {
+        width: 20px;
+        height: 20px;
+        background: yellow;
+    }
+}
+
+.title-container {
+
+    &__title {
+        font-size: 1.9rem;
+        font-weight: bold;
+        color: #858688;
+
+        &--bright {
+            color: #5b4295;
+        }
+    }
+
+    &__lang-list {
+        display: flex;
+        padding-top: 1.4rem;
+    }
+
+    &__lang-item {
+        margin-right: 1.2rem;
+        position: relative;
+        border-bottom: 1px solid transparent;
+        transition: all .2s ease-in-out;
+
+        &::after {
+            content: '/';
+            position: absolute;
+            right: -0.8rem;
+            top: 0;
+            font-weight: normal;
+        }
+        
+        &:hover {
+            border-bottom-color: #bfc5d4;
+        }
+
+        &--active {
+            font-weight: bold;
+            padding-bottom: .2rem;
+            border-bottom-color: #bfc5d4;
+        }
+
+        &--last {
+            &::after {
+                content: none;
+            }
+        }
+    }
+    
+    &__lang {
+        color: #959595;
+        padding-bottom: .2rem;
+    }
+}
+
+.header-menu {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    
+    &__item {
+        padding: .7rem;
+        position: relative;
+        color: #5e5e5e;
+        
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: #5e5e5e;
+            transition: all .2s ease-in-out;
+        }
+
+        &:hover::before {
+            left: 0;
+            width: 100%;
+        }
+    }
+}
+
+.registration {
+
+    &__login {
+        padding: .7rem;
+        margin: 0 .4rem 0 3.7rem;
+
+        &:hover {
+            & .registration__login-icon {
+                transform: translateX(4px);
+            }
+            
+            & .registration__login-text {
+                color: #582c7e;
+            } 
+        }
+    }
+    
+    &__login-icon {
+        color: #582c7e;
+        margin-right: 4px;
+        transition: all .2s ease-in-out;
+    }
+    
+    &__login-text {
+        color: #454545;
+        font-weight: bold;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: .9rem;
+        transition: all .2s ease-in-out;
+    }
+}
+
+.main {
+    background: yellow;
+    height: 100px;
+}
