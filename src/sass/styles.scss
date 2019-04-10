@@ -37,18 +37,18 @@ html {
     align-items: center;
     justify-content: center;
     padding-bottom: 16rem;
-    margin-bottom: -20px;
+    margin-bottom: -24px;
     position: relative;
     background-image: linear-gradient(#fff 40%, transparent), url('../../assets/images/header-background.png');
     background-repeat: no-repeat;
-    background-position: center 70%;
+    background-position: center 33%;
     background-size: 100% auto;
 
     &__top {
         display: flex;
         flex-flow: row nowrap;
         justify-content: flex-end;
-        max-width: 1400px;
+        max-width: 1430px;
         width: 100%;
         padding-top: 4.7rem;
         margin: 0 1rem;
@@ -61,7 +61,7 @@ html {
         font-size: 3.7rem;
         font-weight: bold;
         color: $primary-dark;
-        margin-top: 10rem;
+        margin-top: 10.3rem;
     }
     
     &__location-text {
@@ -97,14 +97,10 @@ html {
     &__download-icon {
         font-size: 1.2rem;
         font-weight: normal;
-
-        &--play {
-            margin-left: .2rem;
-        }
     }
 
     &__ellipse {
-        margin: 0 .5rem;
+        margin-right: 1rem;
         background: linear-gradient(to right, #636b92, #5f2f6a);
     }
 
@@ -113,14 +109,16 @@ html {
         flex-flow: column nowrap;
         position: absolute;
         right: 34px;
-        top: 50%;
-        transform: translateY(50%);
+        top: 40%;
     }
 
     &__socials-link {
+        font-size: 1.3rem;
         width: 20px;
         height: 20px;
-        background: yellow;
+        color: #5e5e5e;
+        margin-bottom: 16px;
+        // TODO: add hover
     }
 }
 
@@ -209,6 +207,7 @@ html {
 }
 
 .registration {
+    padding-right: 2.2rem;
 
     &__login {
         padding: .7rem;
@@ -241,6 +240,5 @@ html {
 }
 
 .main {
-    background: yellow;
-    height: 100px;
+    position: relative;
 }
