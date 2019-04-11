@@ -9,15 +9,16 @@ html {
 }
 
 body {
-    // background: ;
+    background: 
+        linear-gradient(174deg, #fff 116rem, transparent 112rem), 
+        linear-gradient(#f3f3f3 110rem, #fff);
 }
 
 .ellipse {
     display: inline-flex;
-    flex-flow: row wrap;
-    align-items: center;
     justify-content: center;
-    padding: .7rem 1.3rem;
+    align-items: center;
+    padding: .7rem 1.3rem .8rem;
     background: linear-gradient(120deg, #582c7e, #6275cb);
     border-radius: 20px;
     box-shadow: 0 7px 20px #8796c7;
@@ -42,7 +43,9 @@ body {
     padding-bottom: 16rem;
     margin-bottom: -24px;
     position: relative;
-    background-image: linear-gradient(#fff 40%, transparent), url('../../assets/images/header-background.png');
+    background-image: 
+        linear-gradient(#fff 40%, transparent), 
+        url('../../assets/images/header-background.png');
     background-repeat: no-repeat;
     background-position: center 33%;
     background-size: 100% auto;
@@ -80,7 +83,7 @@ body {
     }
 
     &__account {
-        padding: 1.2rem 3.8rem;
+        padding: 1.1rem 3.8rem 1.2rem;
         border-radius: 30px;
     }
     
@@ -98,6 +101,10 @@ body {
     &__download-icon {
         font-size: 1.2rem;
         font-weight: normal;
+
+        &--play {
+            margin-left: .2rem;
+        }
     }
 
     &__ellipse {
@@ -459,7 +466,14 @@ body {
     }
 
     &__link-img {
-
+        box-shadow: 0 0 0 0 #000;
+        border-radius: 4px;
+        
+        &:hover {
+            box-shadow: 0 0 0 10px transparent;
+            transition: all .3s ease-in-out;
+        }
+        
         &--google {
             margin-left: .5rem;
         }
@@ -473,4 +487,50 @@ body {
         margin-bottom: 1.7rem;
     }
 
+}
+
+.support {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 4.7rem 0;
+
+    &__h3 {
+        width: 100%;
+        text-align: center;
+        font-size: 2.3rem;
+    }
+
+    &__writing {
+        width: 100%;
+        text-align: center;
+        line-height: 2;
+        color: $primary-dark;
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+    }
+
+    &__link {
+        padding: 1.2rem 2rem 1.4rem;
+        border-radius: 50px;
+        margin-right: 3rem;
+        
+        &--donate {
+            background: linear-gradient(to right, #37b9e1, #5e7bea);
+            box-shadow: 0 7px 20px #91dad4;
+            padding: 1.2rem 2.7rem 1.4rem;
+
+            &:hover {
+                box-shadow: 0 7px 20px #91dad4, 0 4px 12px #004943;
+            }
+        }
+    }
+    
+    &__link-text {
+        font-size: 1rem;
+    }
+    
+    &__icon {
+        margin-right: .4rem;
+    }
 }
