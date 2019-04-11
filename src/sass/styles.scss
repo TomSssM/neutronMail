@@ -8,6 +8,10 @@ html {
     font-family: $primary-font-family;
 }
 
+body {
+    // background: ;
+}
+
 .ellipse {
     display: inline-flex;
     flex-flow: row wrap;
@@ -391,17 +395,25 @@ html {
 }
 
 .partners {
-    padding: 4.3rem 0 2rem 0;
+    padding: 4.3rem 0 4rem 0;
 }
 
 .phone-download {
     display: grid;
-    grid-template-columns: 19% 30.8% 1fr;
+    grid-template-columns: 2.7fr 15rem 18rem 10rem 5fr;
     grid-template-areas: 
-        '. b .'
-        '. c c';
+        '. b b . .'
+        '. . a a .' 
+        '. l l l l';
     position: relative;
-    padding: 1.8rem 0 0 40px;
+
+    &::before {
+        content: '';
+        display: block;
+        grid-area: l;
+        border-bottom: $primary-border;
+        height: 10rem;
+    }
     
     &__quote {
         grid-area: b;
@@ -434,22 +446,16 @@ html {
     }
 
     &__article {
+        grid-area: a;
         text-align: right;
+        padding-top: 7.3rem;
         position: relative;
-        width: 430px;
-        margin: 7.4rem 0 0 17rem;
     }
 
     &__img {
         position: absolute;
-        top: 2%;
-        right: 15.5%;
-    }
-
-    &__container {
-        grid-area: c;
-        border-bottom: $primary-border;
-        padding-bottom: 10rem;
+        top: -4%;
+        left: 52%;
     }
 
     &__link-img {
@@ -466,7 +472,5 @@ html {
     &__paragraph {
         margin-bottom: 1.7rem;
     }
-
-    // TODO: add the gradient
 
 }
