@@ -5,7 +5,7 @@ html {
   font-family: "Ubuntu", sans-serif; }
 
 body {
-  background: linear-gradient(174deg, #fff 116rem, transparent 112rem), linear-gradient(#f3f3f3 110rem, #fff); }
+  background: linear-gradient(174deg, #fff 116rem, transparent 112rem), linear-gradient(#f3f3f3 110rem, #fff, #fff 90%); }
 
 .ellipse {
   display: inline-flex;
@@ -42,7 +42,7 @@ body {
   max-width: 1430px;
   width: 100%;
   padding-top: 4.7rem;
-  margin: 0 1rem; }
+  margin: 0 2rem; }
 .header__h1 {
   width: 100%;
   text-align: center;
@@ -467,5 +467,74 @@ body {
   padding: 1rem 0 2rem; }
 .footer__copyright-text {
   font-size: .9rem; }
+
+@media all and (max-width: 1230px) {
+  .phone-download__img {
+    left: 41%; }
+
+  .footer {
+    grid-template-columns: 4rem 1fr auto 20% 12% 8%; } }
+@media all and (max-width: 1100px) {
+  body {
+    background: linear-gradient(174deg, #fff 130rem, transparent 112rem), linear-gradient(#f3f3f3 110rem, #fff, #fff 90%); }
+
+  .header {
+    padding-bottom: 0; }
+  .header__top {
+    flex-flow: row wrap;
+    justify-content: center; }
+
+  .title-container {
+    flex: 1; }
+
+  .registration {
+    width: 100%;
+    text-align: center; }
+  .registration__login {
+    display: inline-block; }
+
+  .features {
+    grid-template-columns: 1fr 4fr 2fr;
+    grid-template-areas: '. one .' '. two .' '. last .' 'main main .'; }
+  .features__feature--first {
+    border-right: 1px solid #505050; }
+  .features__feature--first::after {
+    height: 40px;
+    top: 0;
+    transform: translateY(-100%);
+    right: -1px; }
+  .features__feature--last {
+    border-right: 1px solid #505050; }
+
+  .phone-download__img {
+    left: 20%; }
+
+  .support__link--donate {
+    margin-right: 0; }
+
+  .partners {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .partners__image {
+    width: 100%; }
+
+  .footer {
+    grid-template-columns: 0 1fr auto 21% 15% 0fr; }
+  .footer__main-section--three {
+    border: none; }
+  .footer__sponsors {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding-bottom: 4rem; }
+  .footer__sponsors-writing {
+    align-self: flex-end; }
+  .footer__sponsors-img {
+    width: 100%; }
+  .footer__contacts {
+    border: none; } }
 
 /*# sourceMappingURL=styles.css.map */
